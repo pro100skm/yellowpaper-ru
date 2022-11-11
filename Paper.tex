@@ -75,9 +75,9 @@
 \pagecolor{pagecolor}
 
 \begin{abstract}
-The blockchain paradigm when coupled with cryptographically-secured transactions has demonstrated its utility through a number of projects, with Bitcoin being one of the most notable ones. Each such project can be seen as a simple application on a decentralised, but singleton, compute resource. We can call this paradigm a transactional singleton machine with shared-state.
+Парадигма блокчейн в связке с криптографически защищенными транзакциями продемонстрировала свою эффективность(полезность) в ряде проектов, один из самых внушительных примеров - Биткойн. Каждый такой проект может быть представлен как простое приложение в децентрализованном, но едином(одноэлементном), вычислительном ресурсе. Мы можем называть эту парадигму транзакционной одноэлементной(единой) машиной с разделенным(распределенным) состоянием.
 
-Ethereum implements this paradigm in a generalised manner. Furthermore it provides a plurality of such resources, each with a distinct state and operating code but able to interact through a message-passing framework with others. We discuss its design, implementation issues, the opportunities it provides and the future hurdles we envisage.
+Ethereum реализует эту парадигму в обобщенном виде. Кроме того, он(Ethereum) предоставляет множество таких ресурсов, каждый из которых со своим отдельным состоянием и исполняемым кодом, и все они способны взаимодействовать друг с другом через платформу передачи сообщений. Мы обсуждаем его дизайн, вопросы реализации, возможности, которые он предоставляет, будущие проблемы, которые мы предвидим.
 \end{abstract}
 
 \maketitle
@@ -85,8 +85,9 @@ Ethereum implements this paradigm in a generalised manner. Furthermore it provid
 \setlength{\columnsep}{20pt}
 \begin{multicols}{2}
 
-\section{Introduction}\label{sec:introduction}
+\section{Введение}\label{sec:introduction}
 
+С повсеместным подключением к интернету в большинстве мест мира, глобальная передача информации стала невероятно дешёвой.
 With ubiquitous internet connections in most places of the world, global information transmission has become incredibly cheap. Technology-rooted movements like Bitcoin have demonstrated through the power of the default, consensus mechanisms, and voluntary respect of the social contract, that it is possible to use the internet to make a decentralised value-transfer system that can be shared across the world and virtually free to use. This system can be said to be a very specialised version of a cryptographically secure, transaction-based state machine. Follow-up systems such as Namecoin adapted this original ``currency application'' of the technology into other applications, albeit rather simplistic ones.
 
 Ethereum is a project which attempts to build the generalised technology; technology on which all transaction-based state machine concepts may be built. Moreover it aims to provide to the end-developer a tightly integrated end-to-end system for building software on a hitherto unexplored compute paradigm in the mainstream: a trustful object messaging compute framework.
