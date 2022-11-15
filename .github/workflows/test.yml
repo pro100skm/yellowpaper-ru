@@ -47,14 +47,14 @@ jobs:
         - name: Show in build dir
           run: ls ${{ github.workspace }}/build
 
-        - name: Pushing
-          run: |
-            ls -a ${{ github.workspace }}
-            git config --global user.name PRO100SKM
-            git config --global user.email pro100skm@yandex.ru
-            git add paper.pdf
-            git commit -m "Automated report"
-            git push -f git@github.com:pro100skm/yellowpaper-ru.git gh-pages
+#        - name: Pushing
+#          run: |
+#            ls -a ${{ github.workspace }}
+#            git config --global user.name PRO100SKM
+#            git config --global user.email pro100skm@yandex.ru
+#            git add paper.pdf
+#            git commit -m "Automated report"
+#            git push -f git@github.com:pro100skm/yellowpaper-ru.git gh-pages
 
         - uses: EndBug/add-and-commit@v9
           with:
