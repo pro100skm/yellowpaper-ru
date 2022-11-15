@@ -50,6 +50,7 @@ jobs:
           run: |
             git config --global user.name 'PRO100SKM'
             git config --global user.email 'pro100skm@yandex.ru'
+            git checkout gh-pages
             git add -f README.md index.html paper.pdf
             git commit -am "Automated report"
             git push gh-pages
