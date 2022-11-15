@@ -57,10 +57,12 @@ jobs:
 #            git push -f git@github.com:pro100skm/yellowpaper-ru.git gh-pages
 
         - name: Create file
-          run: echo "Hello" >> hello.txt
+          run: |
+            echo "Hello" >> hello.txt
+            git checkout --orphan gh-pages
+            git rm --cached -r .
         - uses: EndBug/add-and-commit@v9
           with:
-            remove: '--cached -r .'
             add: 'hello.txt'
             new_branch: gh-pages
             author_name: PRO100SKM
