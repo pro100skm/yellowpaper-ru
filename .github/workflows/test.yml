@@ -59,6 +59,7 @@ jobs:
         - uses: EndBug/add-and-commit@v9
           with:
             add: 'paper.pdf'
+            new_branch: gh-pages
             author_name: PRO100SKM
             author_email: pro100skm@yandex.ru
             message: 'Your commit message'
