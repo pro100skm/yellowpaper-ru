@@ -23,29 +23,29 @@ jobs:
         - uses: actions/checkout@v2
         - name: List files in the repository
           run: ls ${{ github.workspace }}
-        - name: Update linux
-          run: sudo apt-get -qq update
-        - name: Install textlive
-          run: |
-            sudo apt-get install -y texlive
-            sudo apt-get install -y texlive-latex-extra texlive-lang-cyrillic
-            sudo apt-get install -y cm-super
-        - name: List files in the repository
-          run: ls ${{ github.workspace }}
-        - name: Run "build" script
-          run: ./build.sh
-        - name: Deployment
-          env:
-            ENCRYPTION_LABEL: "19a81de38b62"
-            COMMIT_AUTHOR_EMAIL: "pro100skm@yandex.ru"
-            COMMIT_AUTHOR: "Github CI"
-            PUSH_REPO: "git@github.com:pro100skm/yellowpaper-ru.git"
-          run: ./travis_deploy.sh
-        - name: Show files
-          run: |
-            ls ${{ github.workspace }}
-        - name: Show in build dir
-          run: ls ${{ github.workspace }}/build
+#        - name: Update linux
+#          run: sudo apt-get -qq update
+#        - name: Install textlive
+#          run: |
+#            sudo apt-get install -y texlive
+#            sudo apt-get install -y texlive-latex-extra texlive-lang-cyrillic
+#            sudo apt-get install -y cm-super
+#        - name: List files in the repository
+#          run: ls ${{ github.workspace }}
+#        - name: Run "build" script
+#          run: ./build.sh
+#        - name: Deployment
+#          env:
+#            ENCRYPTION_LABEL: "19a81de38b62"
+#            COMMIT_AUTHOR_EMAIL: "pro100skm@yandex.ru"
+#            COMMIT_AUTHOR: "Github CI"
+#            PUSH_REPO: "git@github.com:pro100skm/yellowpaper-ru.git"
+#          run: ./travis_deploy.sh
+#        - name: Show files
+#          run: |
+#            ls ${{ github.workspace }}
+#        - name: Show in build dir
+#          run: ls ${{ github.workspace }}/build
 
 #        - name: Pushing
 #          run: |
@@ -60,7 +60,7 @@ jobs:
           run: echo "Hello" >> hello.txt
         - uses: EndBug/add-and-commit@v9
           with:
-            add: 'paper.pdf hello.txt'
+            add: 'hello.txt'
             new_branch: gh-pages
             author_name: PRO100SKM
             author_email: pro100skm@yandex.ru
