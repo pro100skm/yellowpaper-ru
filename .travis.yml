@@ -15,5 +15,5 @@ env:
   global:
     - ENCRYPTION_LABEL="19a81de38b62"
     - COMMIT_AUTHOR_EMAIL="pro100skm@yandex.ru"
-    - COMMIT_AUTHOR="Travis CI"
+    - COMMIT_AUTHOR="Github Actions"
     - PUSH_REPO="git@github.com:pro100skm/yellowpaper-ru.git"

@@ -25,4 +25,6 @@ git commit -m "Built pdf from {$SHA}."
 #eval `ssh-agent -s`
 #ssh-add deploykey
 
-git push -f "$PUSH_REPO" gh-pages
+echo "$PUSH_REPO"
+
+#git push -f "$PUSH_REPO" gh-pages
