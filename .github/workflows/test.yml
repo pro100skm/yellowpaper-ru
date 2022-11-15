@@ -21,8 +21,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-          with:
-            token: ${{ secrets.SOME }}
         - name: List files in the repository
           run: ls ${{ github.workspace }}
         - name: Update linux
