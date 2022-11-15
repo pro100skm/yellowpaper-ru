@@ -29,7 +29,7 @@ jobs:
         - name: Install textlive
           run: |
             sudo apt-get install -y texlive
-            sudo apt-get install -y texlive-latex-extra
+            sudo apt-get install -y texlive-latex-extra texlive-lang-cyrillic
             sudo apt-get install -y cm-super
         - name: List files in the repository
           run: ls ${{ github.workspace }}
