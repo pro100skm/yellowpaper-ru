@@ -28,7 +28,7 @@ jobs:
           run: sudo apt-get -qq update
         - name: Install textlive
           run: |
-            sudo apt-get install -y texlive
+            sudo apt-get install -y texlive texlive-latex3
             sudo apt-get install -y texlive-latex-extra
         - name: List files in the repository
           run: ls ${{ github.workspace }}
