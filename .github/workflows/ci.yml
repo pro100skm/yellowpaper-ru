@@ -18,7 +18,8 @@ jobs:
       - name: List files
         run: |
           ls
-
+      - name: PWD
+        run: pwd
 #  run-script:
 #    name: Only scripts
 #    runs-on: ubuntu-latest
