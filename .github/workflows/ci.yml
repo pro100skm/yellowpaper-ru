@@ -15,8 +15,8 @@ jobs:
         run: sudo apt-get -qq update
       - name: Install textlive
         run: |
-          apt-get install -y texlive
-          apt-get install -y texlive-latex-extra
+          sudo apt-get install -y texlive
+          sudo apt-get install -y texlive-latex-extra
       - name: Run "build" script
         run: sh ./build.sh
       - name: Deployment
