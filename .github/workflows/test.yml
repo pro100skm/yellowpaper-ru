@@ -45,7 +45,8 @@ jobs:
         - name: Show files
           run: |
             ls ${{ github.workspace }}
-            ls ${{ github.workspace }}/build
+        - name: Show in build dir
+          run: ls ${{ github.workspace }}/build
         - name: Pushing
           run: |
             git config --global user.name 'PRO100SKM'
@@ -53,4 +54,4 @@ jobs:
             git checkout gh-pages
             git add -f README.md index.html paper.pdf
             git commit -am "Automated report"
-            git push gh-pages
+            git push -f git@github.com:pro100skm/yellowpaper-ru.git gh-pages
