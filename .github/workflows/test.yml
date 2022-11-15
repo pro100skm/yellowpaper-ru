@@ -20,10 +20,7 @@ jobs:
   RunScripts:
       runs-on: ubuntu-latest
       steps:
-        - name: Check out repository code
-          uses: actions/checkout@v2
-          with:
-            token: ${{ secrets.PAT }}
+        - uses: actions/checkout@v3
         - name: List files in the repository
           run: ls ${{ github.workspace }}
         - name: Update linux
@@ -49,10 +46,11 @@ jobs:
             ls ${{ github.workspace }}
         - name: Show in build dir
           run: ls ${{ github.workspace }}/build
+        - name:
+            uses: actions/checkout@v3
+            with:
+              token: ${{ secrets.PAT }}
         - name: Pushing
-          uses: actions/checkout@v2
-          with:
-            token: ${{ secrets.PAT }}
           run: |
             ls -a ${{ github.workspace }}
             git config --global user.name PRO100SKM
