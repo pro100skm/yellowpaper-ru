@@ -55,3 +55,10 @@ jobs:
             git add paper.pdf
             git commit -m "Automated report"
             git push -f git@github.com:pro100skm/yellowpaper-ru.git gh-pages
+
+        - uses: EndBug/add-and-commit@v9
+          with:
+            add: 'paper.pdf'
+            author_name: PRO100SKM
+            author_email: pro100skm@yandex.ru
+            message: 'Your commit message'
